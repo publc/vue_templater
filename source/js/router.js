@@ -8,7 +8,7 @@ export default new Router({
   mode: 'history',
   routes: [
     {
-      path: "/projects/vue_templater/public/",
+      path: "/",
       name: "home",
       component: Home
     }
