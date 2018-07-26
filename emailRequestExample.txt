@@ -1,0 +1,28 @@
+import axios from 'axios';
+export default {
+    methods: {
+        request() {
+            axios.post('contact/contact.php', {name: 'diego'}, {
+                headers: {'X-Requested-With': 'XMLHttpRequest'}
+            })
+            .then(res => {
+                console.log(res);
+            }) 
+            .catch(error => {
+                console.log(error);
+            });
+        }
+    }
+}
+
+
+Ir a public/contact/contact.php y cambiar las variables por los valores reales:
+
+$mail->Host
+$mail->Username
+$mail->Password
+
+$mail->From
+$mail->FromName
+$mail->AddAddress();
+$mail->AddReplyTo();

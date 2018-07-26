@@ -1,5 +1,17 @@
 <template>
     <div>
-        <h1>Vue Inicial</h1>
+        <h1>Say hello vue</h1>
     </div>
 </template>
+
+<script>
+
+export default {
+    
+}
+</script>
+
+
+
+
+
