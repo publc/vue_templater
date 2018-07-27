@@ -18,16 +18,16 @@ import Contact from './Contact.vue';
 import Footer from '../components/Footer.vue';
 export default {
     components: {
-    'am-header': Header,
-    'am-principal': Principal,        
-    'am-services': Services,        
-    'am-products': Products,
-    'am-contact': Contact,
-    'am-footer': Footer
-
+        'am-header': Header,
+        'am-principal': Principal,        
+        'am-services': Services,        
+        'am-products': Products,
+        'am-contact': Contact,
+        'am-footer': Footer
     }
 }
 </script>
+
 
 
 

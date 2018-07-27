@@ -1,0 +1,24 @@
+$mainColor: #212121;
+$mainWhite: #fafafa;
+
+
+@mixin flex($flow: row nowrap, $justify: center, $align: center) {
+    display: flex;
+    flex-flow: $flow;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+@mixin link($color: $mainColor, $size: 1.1em, $padding: 7.5px 15px, $transform: uppercase) {
+    padding: $padding;
+    font-size: $size;
+    color: $color;
+    text-transform: $transform;
+    text-decoration: none;
+    cursor: pointer;
+}
