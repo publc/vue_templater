@@ -1,14 +1,16 @@
 <template>
-    <div class="navbar">
-        <a href="#" class="logo">amega</a>
-        <ul class="nav-menu">
-            <li class="nav-item" v-for="(link, i) in links" :key="i">
-                <a :href="`#${link.to}`" 
-                    class="nav-link"
-                    @click.prevent="navigate(link.to)">{{ link.name }}</a>
-            </li>
-        </ul>
-    </div>
+    <transition name="slide" :appear="true">
+        <div class="navbar">
+            <a href="#" class="logo" @click.prevent>amega</a>
+            <ul class="nav-menu">
+                <li class="nav-item" v-for="(link, i) in links" :key="i">
+                    <a :href="`#${link.to}`" 
+                        class="nav-link"
+                        @click.prevent="navigate(link.to)">{{ link.name }}</a>
+                </li>
+            </ul>
+        </div>
+    </transition>
 </template>
 
 <script>
@@ -27,12 +29,14 @@ export default {
 @import '~@scss/style.scss';
 
     .navbar {
-        height: 60px;
+        height: 80px;
         @include container;
         @include flex(row nowrap, space-between);
+        font-family: 'Open Sans', sans-serif;
 
         .logo {
-            @include link(red, 1.8em, 0, lowercase);
+            @include link($mainRed, 2em, 0, lowercase);
+            text-shadow: 2px 2px 3px $mainColor;
         }
 
         .nav-menu {
@@ -42,10 +46,20 @@ export default {
                margin: 0 10px;
 
                .nav-link {
-                   @include link($mainColor, .9em, 0 10px);
+                   @include link($mainWhite, .95em, 0 10px);
+                   font-weight: 600;
+                   text-shadow: 2px 2px 3px $mainColor;
                }
            }
         }
+    }
+
+    .slide-enter-active, .slide-leave-active {
+        transition: transform .5s 1s ease-out;
+    }
+
+    .slide-enter, .slide-leave-to {
+        transform: translateY(-200px);
     }
 </style>
 

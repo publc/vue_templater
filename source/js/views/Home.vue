@@ -12,7 +12,7 @@
 <script>
 import Header from '../components/Header.vue';
 import Principal from './Principal.vue';
-import Services from './Services.vue';
+import Services from './services/Services.vue';
 import Products from './Products.vue';
 import Contact from './Contact.vue';
 import Footer from '../components/Footer.vue';
